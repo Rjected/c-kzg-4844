@@ -20,3 +20,6 @@ __pycache__
 
 # nimble build dir
 build/
+
+# ccls cache dir
+.ccls-cache/
