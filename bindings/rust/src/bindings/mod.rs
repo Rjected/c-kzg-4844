@@ -446,6 +446,18 @@ impl KZGCommitment {
     }
 }
 
+impl From<Bytes48> for KZGCommitment {
+    fn from(value: Bytes48) -> Self {
+        Self { bytes: value.bytes }
+    }
+}
+
+impl From<Bytes48> for KZGProof {
+    fn from(value: Bytes48) -> Self {
+        Self { bytes: value.bytes }
+    }
+}
+
 impl From<[u8; BYTES_PER_COMMITMENT]> for KZGCommitment {
     fn from(value: [u8; BYTES_PER_COMMITMENT]) -> Self {
         Self { bytes: value }
